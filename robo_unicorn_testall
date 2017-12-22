@@ -1,0 +1,37 @@
+from microbit import *
+
+pin0.set_analog_period(20)
+pin0.set_analog_period(20)
+
+def backward(N):
+    pin0.write_analog(10)
+    pin1.write_analog(100)
+    sleep(N)
+    
+def forward(N):
+    pin0.write_analog(100)
+    pin1.write_analog(10)
+    sleep(N)
+
+def turnRight(N):
+    pin0.write_analog(100)
+    pin1.write_analog(100)
+    sleep(N)
+
+def turnLeft(N):
+    pin0.write_analog(10)
+    pin1.write_analog(10)
+    sleep(N)
+    
+def stopIt(N):
+    pin0.write_analog(0)
+    pin1.write_analog(0)
+    sleep(N)
+
+
+while True:
+    forward(1500)
+    backward(1500)
+    turnLeft(1500)
+    turnRight(1500)
+    stopIt(1000)
