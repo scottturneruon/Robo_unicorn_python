@@ -1,0 +1,24 @@
+from microbit import *
+import radio
+
+radio.on()
+
+while True:
+    if (accelerometer.get_y()<-200):
+        radio.send("fwd")
+        display.scroll("f")
+        sleep(500)
+    if (accelerometer.get_y()>200):
+        radio.send("bwd")
+        display.scroll("b")
+        sleep(500)
+    if (accelerometer.get_x()<-200):
+        radio.send("tl")
+        display.scroll("l")
+        sleep(500)
+    if (accelerometer.get_x()>200):
+        radio.send("tr")
+        display.scroll("r")  
+        sleep(500)
+    radio.send("stp")
+    display.scroll("s")
