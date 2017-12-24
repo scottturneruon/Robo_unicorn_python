@@ -7,3 +7,4 @@ sender_unicorn_test.py - sends via radio module messages to go forward, backward
 
 recieve_unicorn.py - recieves nessage from sender_unicorn_test.py via the radio and responds with the appropriate action.
 
+gesture_unicorn.py = sends commands the same as sender_unicorn_test.py but it is the movement in x and y directions that determeine the motion.
